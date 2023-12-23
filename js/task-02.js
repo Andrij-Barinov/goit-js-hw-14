@@ -33,9 +33,11 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
+const fragment = document.createDocumentFragment();
 ingredients.forEach(ingredient => {
   const listItem = document.createElement('li');
   listItem.textContent = ingredient;
   listItem.classList.add('item');
-  ingredientsList.appendChild(listItem);
+  fragment.appendChild(listItem);
 });
+ingredientsList.appendChild(fragment);
